@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Arcadepix Plus";
+  src: url("//db.onlinewebfonts.com/t/dbb1e634699fd208e25ea064f5cc583a.eot");
+  src: url("//db.onlinewebfonts.com/t/dbb1e634699fd208e25ea064f5cc583a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/dbb1e634699fd208e25ea064f5cc583a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/dbb1e634699fd208e25ea064f5cc583a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/dbb1e634699fd208e25ea064f5cc583a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/dbb1e634699fd208e25ea064f5cc583a.svg#Arcadepix Plus")
+      format("svg");
+}
+
+body {
+  font-family: "Arcadepix Plus";
+}
+
+#project-rundown-image {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-navbar > * {
+  margin-left: 10px;
+}
+
+#mainnav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#mainnav::-webkit-scrollbar {
+  display: none;
+}
+
+#mainnav,
+#mainnav .container {
+  padding: 0;
+  max-width: 20vw;
+  height: 100vh;
+  background-color: black;
+  display: block;
+}
+
+.menu-onepage-menu {
+  max-width: 15vw;
+}
+
+.use-dapp {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.burger-button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+
+.burger-column {
+  margin-left: 2em;
+}
+
+.navbar-logo-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-logo-row .col {
+  padding-left: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.tap-logo {
+  min-width: 200px;
+}
+
+a.nav-link {
+  font-size: 25px !important;
+}
+
+.hide {
+  animation-name: move;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: -20vw;
+  }
+}
+.team-photo {
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 200em;
+  max-width: 160px;
+  max-height: 160px;
+}
+.founder-image {
+  max-width: 160px;
+  margin-bottom: 10px;
+  border-radius: 0% !important;
+}
+.team-circle {
+  border-radius: none;
+}
+
+.team-photo img {
+  border-radius: 0px;
+}
+
+.lead-marketing-image-container {
+  border-radius: none;
+  min-height: 160px;
+}
+#logo-column {
+  margin-top: 5px;
+  margin-left: 3vw;
+}
+
+.use-dapp {
+  margin-top: 0.6%;
+  margin-right: 2vw;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.use-dapp a {
+  font-weight: 300;
+  font-size: 12px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  /* .navbar-collapse {
+    display: block;
+    background: none;
+  }
+  #menu-onepage-menu {
+    background: none;
+  } */
+  #mainnav {
+    display: none;
+  }
+  .header-row {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-width: 100vw;
+    position: fixed;
+    z-index: 9999;
+  }
+  .use-dapp {
+    margin-top: 2.5%;
+  }
+}
