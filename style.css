@@ -260,9 +260,8 @@ body {
   padding-bottom: 0px !important;
 }
 
-.fas,
-.fab,
-.team-social {
+.team-social .fas,
+.team-social .fab {
   color: white;
 }
 
@@ -293,6 +292,7 @@ body {
   color: white !important;
 }
 
-.fab.fa-discord {
+.fab,
+.fas {
   color: #3c3c3c;
 }
