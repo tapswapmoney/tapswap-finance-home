@@ -33,7 +33,6 @@ body {
   z-index: 9999;
   top: 0;
   left: 0;
-  background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -48,7 +47,12 @@ body {
   padding: 0;
   max-width: 20vw;
   height: 100vh;
-  background-color: black;
+  background: rgb(220, 91, 250);
+  background: radial-gradient(
+    circle,
+    rgba(220, 91, 250, 1) 0%,
+    rgba(36, 187, 245, 1) 100%
+  );
   display: block;
 }
 
@@ -141,9 +145,11 @@ a.nav-link {
   display: flex;
   align-items: center;
   align-content: center;
+  border-radius: 15px;
 }
 
 .use-dapp a {
+  color: white;
   font-weight: 300;
   font-size: 12px !important;
 }
@@ -174,4 +180,119 @@ p.lead,
 .wpb_wrapper p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
+}
+
+.text-block ul:not(.btns) li:before {
+  background: transparent;
+  content: "\2713";
+  color: #83f52c;
+}
+
+.wpb_wrapper li {
+  font-size: 23px;
+  letter-spacing: 0.5px;
+  color: #0b0d27 !important;
+}
+.wpb_wrapper p {
+  color: white !important;
+}
+
+.section-bg-blend,
+.section-bg-alt,
+.banner.banner-curb,
+.section-bg-btoa,
+.section-bg,
+.section-bg-dark,
+.accordion > *,
+.collapsed {
+  background-image: none;
+  background-color: none;
+  background: none;
+}
+
+body {
+  background: rgb(220, 91, 250);
+  background: linear-gradient(
+    0,
+    rgba(220, 91, 250, 1) 0%,
+    rgba(36, 187, 245, 1) 30%,
+    rgba(220, 91, 250, 1) 63%,
+    rgba(36, 187, 245, 1) 91%
+  );
+}
+.token-distribution-container {
+  margin-top: 15%;
+}
+
+.single-roadmap h6 {
+  font-size: 18px;
+  color: wheat !important;
+}
+
+.team-title {
+  font-size: 18px !important;
+  color: wheat !important;
+}
+
+.sub-heading.ucap {
+  color: white;
+}
+
+.btn-more {
+  color: white !important;
+}
+
+.roadmap-slider {
+  font-size: 20px;
+  color: white;
+}
+
+.roadmap-slider div {
+  align-items: center;
+  text-align: center;
+}
+
+.roadmap-slider h6 {
+  color: wheat !important;
+}
+
+#roadmap {
+  padding-bottom: 0px !important;
+}
+
+.fas,
+.fab,
+.team-social {
+  color: white;
+}
+
+.blog-texts {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.collapsed {
+  background-color: tomato;
+}
+
+.accordion .card {
+  border-bottom: 1px solid white !important;
+}
+
+.accordion .card,
+.accordion .collapsed {
+  background-color: transparent !important;
+}
+
+.card-header {
+  background-color: transparent !important;
+}
+
+.ti.ti-angle-up {
+  color: white !important;
+}
+
+.fab.fa-discord {
+  color: #3c3c3c;
 }

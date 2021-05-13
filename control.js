@@ -25,3 +25,15 @@ function toggleNav() {
     mainNavOpen = true;
   }
 }
+
+$(document).ready(function () {
+  $(".roadmap-slider").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
