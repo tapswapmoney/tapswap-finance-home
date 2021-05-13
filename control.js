@@ -8,14 +8,14 @@ navBtn.addEventListener("click", toggleNav);
 mainNav.addEventListener("load", toggleNav);
 
 window.addEventListener("load", () => {
-  mainNav.style.left = "-14vw";
+  mainNav.style.left = "-13vw";
   mainNavOpen = false;
   console.log(mainNavOpen);
 });
 
 function toggleNav() {
   if (mainNavOpen) {
-    mainNav.style.left = "-14vw";
+    mainNav.style.left = "-13vw";
     mainNavOpen = false;
   } else {
     /**
