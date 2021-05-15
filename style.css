@@ -66,13 +66,19 @@ body {
   right: 0;
 }
 .burger-button {
+  z-index: 99999;
   display: flex;
   align-items: center;
   position: absolute;
   right: 0;
+  justify-content: center;
   cursor: pointer;
   font-size: 30px;
   color: white;
+}
+
+#navigation-button {
+  transition: content 1s;
 }
 
 .burger-column {
