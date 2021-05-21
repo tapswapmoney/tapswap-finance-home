@@ -17,7 +17,7 @@ jobs:
     name: Deploy to DO QAS
 
     steps:
-      - name: Pull updates from repo
+      - name: Pull updates from tapswap-finance-home
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST_URL }}
@@ -25,27 +25,5 @@ jobs:
           key: ${{ secrets.HOST_KEY }}
           port: ${{ secrets.HOST_PORT }}
           script: |
-            cd ../
+            cd public_html
             git pull
-
-      - name: Install dependencies
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST_URL }}
-          username: ${{ secrets.HOST_USER }}
-          key: ${{ secrets.HOST_KEY }}
-          port: ${{ secrets.HOST_PORT }}
-          script: |
-            cd /var/www/ramen-kuroda-web-qas
-            yarn install
-
-      - name: Build
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST_URL }}
-          username: ${{ secrets.HOST_USER }}
-          key: ${{ secrets.HOST_KEY }}
-          port: ${{ secrets.HOST_PORT }}
-          script: |
-            cd /var/www/ramen-kuroda-web-qas
-            yarn build
