@@ -1,0 +1,51 @@
+# This workflow will do the following:
+# - SSH to the server
+# - Pull the updates
+# - Install dependencies
+# - Build the application
+
+name: Test Deployment
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-to-qas:
+    runs-on: ubuntu-latest
+
+    name: Deploy to DO QAS
+
+    steps:
+      - name: Pull updates from repo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_URL }}
+          username: ${{ secrets.HOST_USER }}
+          key: ${{ secrets.HOST_KEY }}
+          port: ${{ secrets.HOST_PORT }}
+          script: |
+            cd ../
+            git pull
+
+      - name: Install dependencies
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_URL }}
+          username: ${{ secrets.HOST_USER }}
+          key: ${{ secrets.HOST_KEY }}
+          port: ${{ secrets.HOST_PORT }}
+          script: |
+            cd /var/www/ramen-kuroda-web-qas
+            yarn install
+
+      - name: Build
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_URL }}
+          username: ${{ secrets.HOST_USER }}
+          key: ${{ secrets.HOST_KEY }}
+          port: ${{ secrets.HOST_PORT }}
+          script: |
+            cd /var/www/ramen-kuroda-web-qas
+            yarn build
